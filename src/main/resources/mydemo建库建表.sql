@@ -38,7 +38,7 @@ INSERT INTO OAT
 VALUES(
 	'test',
 	'OA128',
-	'tets',
+	'test',
 	'F',
 	0
 );

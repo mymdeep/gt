@@ -43,7 +43,7 @@ public interface OperatingAccountDao {
     List<OperatingAccount> getMaxuserID();
 
     // 重置密码
-    @Update("update oat set PASSWORD='123456' where userid=#{userid}")
+    @Update("update oat set password='123456' where userid=#{userid}")
     Integer resetOperationalAccountPasswordByUserid(OperatingAccount oa);
 
     // 多条件查询，见OperatingAccountDao.xml

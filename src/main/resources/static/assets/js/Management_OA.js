@@ -251,7 +251,7 @@ function resetPassword(obj) {
         data = {userid: userid};
         $.ajax({
             type: "POST",
-            url: "resetOperatingAccountPasswordByUserid",
+            url: "resetOperationalAccountPasswordByUserid",
             contentType: "application/json; charset=utf-8",
             dataType: 'json',
             data: JSON.stringify(data),
@@ -491,4 +491,3 @@ function dosearch() {
         });
     }
 }
-
