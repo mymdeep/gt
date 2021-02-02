@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0 /EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.OperatingAccountDao">
+    <select id="getOperationalAccountByMultipleConditions" resultType="OperatingAccount"
+            parameterType="com.example.demo.bean.OperatingAccount">
+        select * from oat
+        <where>
+            <if test="username != null and username != ''">
+                and username like concat('%',#{username},'%')
+            </if>
+            <if test="userid != null and userid != ''">
+                and userid = #{userid}
+            </if>
+            <if test="sex != null and sex != ''">
+                and sex in ${sex}
+            </if>
+            <if test="astatus == 0 or astatus != null and astatus != ''">
+                and astatus = #{astatus}
+            </if>
+        </where>
+    </select>
+</mapper>

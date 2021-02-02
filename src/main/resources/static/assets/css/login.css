@@ -1,0 +1,154 @@
+.background {
+    /*生成绝对定位的元素，相对于浏览器窗口进行定位。*/
+    /*元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。*/
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /*no-repeat:背景图像将仅显示一次*/
+    background: url("../img/background.jpg") no-repeat;
+    background-size: cover;
+}
+
+.title {
+    position: fixed;
+    left: 195px;
+    top: 35%;
+    color: #fff;
+}
+
+.title h3 {
+    font-size: 54px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.title p {
+    font-size: 32px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.register {
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    margin-top: -250px;
+    width: 480px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    /*设置圆角*/
+    border-radius: 12px;
+}
+
+.register-guide {
+    margin: 50px 0 22px 39px;
+}
+
+.register-guide h3 {
+    margin: 0;
+    font-size: 36px;
+    color: #000;
+    padding-bottom: 4px;
+}
+
+.register-guide p {
+    margin: 0;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+
+.register-guide a {
+    color: #2e58ff;
+    /*隐藏文字下划线*/
+    text-decoration: none;
+}
+
+.label-input {
+    font-size: 14px;
+    text-align: right;
+    width: 82px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    font-weight: 200;
+    float: left;
+}
+
+.div-err {
+    visibility: hidden;
+    color: red;
+    font-size: 10px;
+    position: relative;
+    float: left;
+    height: 16px;
+    width: 280px;
+    padding: 12px 100px;
+    overflow: hidden;
+    line-height: normal;
+}
+
+.text-input {
+    display: block;
+    position: relative;
+    float: left;
+    height: 16px;
+    width: 328px;
+    padding: 11px 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #666;
+    transition: 0.5s;
+}
+
+.text-input:hover {
+    border: 1px solid #3884E4;
+}
+
+.text-input:focus {
+    border: 1px solid #0034ff;
+    /*隐藏轮廓样式*/
+    outline-style: none;
+}
+
+#p-submit {
+    text-align: center;
+    padding-bottom: 10px;
+    /*初始状态不允许点击，若账号密码不为空，则可点击*/
+    pointer-events: none;
+}
+
+.button-submit {
+    width: 399px;
+    background: rgb(189, 206, 252);
+    border-radius: 25px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-style: initial;
+    transition: 0.5s;
+}
+
+.button-submit:active{
+    background: rgb(92, 72, 255) !important;
+}
+.no-select {
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+    /* Chrome/Safari/Opera */
+    -webkit-user-select: none;
+    /* Konqueror */
+    -khtml-user-select: none;
+    /* Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+    /* Non-prefixed version, currently not supported by any browser */
+    user-select: none;
+}

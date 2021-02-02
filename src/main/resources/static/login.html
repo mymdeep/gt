@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+<div id="content" class="no-select">
+    <div class="background"></div>
+    <div class="title">
+        <h3>万家乐</h3>
+        <p>OCP全渠道数字平台运营后台</p>
+    </div>
+    <div class="register">
+        <div class="register-guide">
+            <h3>欢迎登录</h3>
+            <p>忘记密码？<a href="#">联系管理员</a></p>
+        </div>
+        <div class="reg-content">
+            <form autocomplete="off">
+                <p id="p-username">
+                    <label for="username" class="label-input">账　号</label>
+                    <input id="username" type="text" name="username" class="text-input" autocomplete="off" value=""
+                           placeholder="请输入账号" required autofocus onchange="check(this)">
+                <div id="err-username" class="div-err">请输入正确账号</div>
+                </p>
+                <p id="p-password">
+                    <label for="password" class="label-input">密　码</label>
+                    <input id="password" type="password" name="password" class="text-input" autocomplete="off" value=""
+                           placeholder="请输入密码" required onchange="check(this)">
+                <div id="err-password" class="div-err">请输入正确密码，若忘记密码，请联系管理员</div>
+                </p>
+                <p id="p-submit">
+                    <input id="button-submit" type="button" value="登录" class="button-submit" onclick="login()">
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery-3.5.0.js"></script>
+<script src="assets/js/login.js"></script>
+</body>
+</html>

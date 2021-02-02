@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>首页</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection"/>
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css">
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet"/>
+
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/materialize/js/materialize.min.js"></script>
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+    <script src="assets/js/easypiechart.js"></script>
+    <script src="assets/js/easypiechart-data.js"></script>
+    <script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    <script src="assets/js/myindex.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <div class="navbar-brand waves-effect waves-dark">
+                <img id="logo" src="assets/img/logo.png" alt="">
+                <div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+            </div>
+        </div>
+        <div id="navInfo">OCP全渠道数字平台</div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li><a class="dropdown-button waves-effect waves-dark" href="#" data-activates="dropdown1">
+                <i class="fa fa-user fa-fw"></i> <b id="login_username_top">未登录</b>
+                <i class="material-icons right">arrow_drop_down</i>
+            </a></li>
+        </ul>
+    </nav>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a onclick="logout()"><i class="fa fa-sign-out fa-fw"></i> 退出</a></li>
+    </ul>
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+                <li>
+                    <img id="headPic" src="assets/img/headpic.jpg" alt="">
+                    <div id="showInfo">
+                        <p class="username" id="login_username_left">未登录</p>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html" class="active-menu waves-effect waves-dark"><i
+                        class="fa fa-dashboard"></i>首页</a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i>运营管理<span
+                        class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="Management_OA.html"><i class="fa fa-user" aria-hidden="true"></i>运营账号管理</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-users" aria-hidden="true"></i>运营角色管理</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-file"></i>退货订单管理<span
+                        class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>退货申请</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i>查看退货订单</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-fw fa-table"></i>库存管理<span
+                        class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>制定调拨单</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i>调拨单列表</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-fw fa-gear"></i>系统配置<span
+                        class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">日志<span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li><a href="#">修改说明</a></li>
+                                <li><a href="#">查看日志</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper">
+        <div class="header">
+            <h1 class="page-header">首页</h1>
+            <ol class="breadcrumb">
+                <li><a href="#">我的待办</a></li>
+                <li><a href="#">快捷功能</a></li>
+                <li><a href="#">常用信息平台</a></li>
+                <li><a href="#">公告</a></li>
+            </ol>
+        </div>
+        <div id="page-inner">
+            <div id="todo">
+                <div class="item-title">我的待办 <span>/ Pending Items</span></div>
+                <div class="item-content">
+                    <div><span class="fa fa-calendar"></span>待审核备货列表</div>
+                    <div><span class="fa fa-calendar"></span>待复核备货列表</div>
+                    <div><span class="fa fa-calendar"></span>待审核批发列表</div>
+                    <div><span class="fa fa-calendar"></span>待复核批发列表</div>
+                    <div><span class="fa fa-calendar"></span>待备货发货</div>
+                    <div><span class="fa fa-calendar"></span>待批发发货</div>
+                </div>
+            </div>
+            <div id="platform">
+                <div class="item-title">常用信息平台 <span>/ Common Information Platform</span></div>
+                <div class="item-content">
+                    <div><img src="assets/img/CRM.png" alt=""/>CRM平台</div>
+                    <div><img src="assets/img/ewt.png" alt=""/>etw平台</div>
+                    <div><img src="assets/img/erp.png" alt=""/>erp平台</div>
+                    <div><img src="assets/img/SCM.png" alt=""/>SCM平台</div>
+                </div>
+            </div>
+            <div id="news">
+                <div class="item-title">公告&nbsp;集团新闻</div>
+                <ul class="item-content-3">
+                    <li>2018届大学生校园招聘</li>
+                    <li>万家乐社会招聘</li>
+                    <li>关于公开选拔空气能事业部门部长的启示</li>
+                    <li>2018届大学生校园招聘</li>
+                    <li>万家乐社会招聘</li>
+                    <li>关于公开选拔空气能事业部门部长的启示</li>
+                </ul>
+            </div>
+            <div id="shortcuts">
+                <div class="item-title">快捷功能 <span>/ Shortcuts</span></div>
+                <div class="item-content-4">
+                    <div>产品类别</div>
+                    <div>账户维护</div>
+                    <div>批发订单列表</div>
+                    <div>待审核备货活动列表</div>
+                    <div>运营后台菜单列表管理</div>
+                    <div>经销商列表</div>
+                    <div>可售商品维护</div>
+                    <div>价格维护</div>
+                    <div>经销商列表</div>
+                </div>
+            </div>
+            <footer><p>Copyright &copy; 2021. 代码敲不队 All rights reserved.</p></footer>
+        </div>
+    </div>
+</div>
+</body>
+</html>
