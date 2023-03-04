@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>运营账号管理</title>
+    <title>游戏配置</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection"/>
     <link href="assets/css/bootstrap.css" rel="stylesheet"/>
@@ -92,7 +92,7 @@
                 <div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
             </div>
         </div>
-        <div id="navInfo">OCP全渠道数字平台</div>
+        <div id="navInfo">国图App后台配置</div>
         <ul class="nav navbar-top-links navbar-right">
             <li><a class="dropdown-button waves-effect waves-dark" href="#" data-activates="dropdown1">
                 <i class="fa fa-user fa-fw"></i> <b id="login_username_top">未登录</b>
@@ -113,109 +113,35 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html" class="waves-effect waves-dark"><i class="fa fa-dashboard"></i>首页</a>
-                </li>
-                <li class="active">
-                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i>运营管理<span
-                        class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse in" aria-expanded="true">
-                        <li>
-                            <a href="Management_OA.html" class="active-menu"><i class="fa fa-user"
-                                                                                aria-hidden="true"></i>运营账号管理</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-users" aria-hidden="true"></i>运营角色管理</a>
-                        </li>
-                    </ul>
+                    <a href="index.html" class="active-menu waves-effect waves-dark"><i
+                            class="fa fa-dashboard"></i>首页</a>
                 </li>
                 <li>
-                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-file"></i>退货订单管理<span
-                        class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>退货申请</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i>查看退货订单</a>
-                        </li>
-                    </ul>
+                    <a href="Management_OA.html" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i>首页图片配置</span></a>
+
                 </li>
-                <li>
-                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-fw fa-table"></i>库存管理<span
-                        class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>制定调拨单</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-bars" aria-hidden="true"></i>调拨单列表<span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-fw fa-gear"></i>系统配置<span
-                        class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="#">日志<span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li><a href="#">修改说明</a></li>
-                                <li><a href="#">查看日志</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+
+
             </ul>
         </div>
     </nav>
     <div id="page-wrapper">
         <div class="header">
-            <h1 class="page-header">运营账号管理</h1>
+            <h1 class="page-header">游戏配置</h1>
         </div>
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-action" id="card-action">运营账号列表</div>
+
                         <div class="card-content" id="card-content">
-                            <div id="div-search2">
-                                <label for="input_search0" class="input_search1">ID：</label>
-                                <input id="input_search0" type="text" class="input_search2" autocomplete="off"
-                                       placeholder="请输入" value="" onchange="getSearchVal(this)">
-                                <label for="input_search1" class="input_search1">用户名：</label>
-                                <input id="input_search1" type="text" class="input_search2" autocomplete="off"
-                                       placeholder="请输入" value="" onchange="getSearchVal(this)">
-                                <label for="input_select_sex" class="input_select1">性别：</label>
-                                <select id="input_select_sex" name="input_select" class="input_select2"
-                                        onchange="getSearchVal(this)">
-                                    <option value="2">全部</option>
-                                    <option value="1">男</option>
-                                    <option value="0">女</option>
-                                </select>
-                                <label for="input_select_status" class="input_select1">账号状态：</label>
-                                <select id="input_select_status" name="input_select" class="input_select2"
-                                        onchange="getSearchVal(this)">
-                                    <option value="2">全部</option>
-                                    <option value="1">启用</option>
-                                    <option value="0">禁用</option>
-                                </select>
-                                <span><a onclick="searchReset()"><i class="fa fa-eraser" aria-hidden="true"></i> 重置</a></span>
-                                <span><a onclick="dosearch()"><i class="fa fa-search"
-                                                                 aria-hidden="true"></i> 查找</a></span>
-                            </div>
+
                             <hr class="my-hr">
-                            <div id="div-operation" class="no-select">
-                                <span><a onclick="light_down_add()"><i class="fa fa-plus-square" aria-hidden="true"></i> 添加账号</a></span>
-                                <span><a onclick="deleteMultiple()"><i class="fa fa-trash-o" aria-hidden="true"></i> 删除账号</a></span>
-                                <span><a onclick="enableMultiple()"><i class="fa fa-check" aria-hidden="true"></i> 启用账号</a></span>
-                                <span><a onclick="disableMultiple()"><i class="fa fa-ban"
-                                                                        aria-hidden="true"></i> 禁用账号</a></span>
-                            </div>
+<!--                            <div id="div-operation" class="no-select">-->
+<!--                                <span><a onclick="light_down_add()"><i class="fa fa-plus-square" aria-hidden="true"></i> 添加配置</a></span>-->
+<!--                                <span><a onclick="deleteMultiple()"><i class="fa fa-trash-o" aria-hidden="true"></i> 删除配置</a></span>-->
+
+<!--                            </div>-->
                             <table class="table table-striped table-bordered table-hover my-table">
                                 <thead class="my-thead">
                                 <tr>
@@ -224,9 +150,9 @@
                                         <label class="check_th" for="check_th"></label>
                                     </th>
                                     <th class="th_userid">ID</th>
-                                    <th class="th_username">用户名</th>
-                                    <th class="th_sex">性别</th>
-                                    <th class="th_status">账号状态</th>
+                                    <th class="th_username">图片地址</th>
+                                    <th class="th_status">路由</th>
+                                    <th class="th_sex">拓展字段</th>
                                     <th class="th_operation">操作</th>
                                 </tr>
                                 </thead>
@@ -237,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <footer><p>Copyright &copy; 2021. 代码敲不队 All rights reserved.</p></footer>
+
         </div>
     </div>
 </div>

@@ -319,17 +319,14 @@ function saveadd_oa() {
                             '   <td>' + ((list[i].astatus === 1) ? "启用" : "禁用") + '</td>' +
                             '   <td class="td-operation no-select">' +
                             '   <div>' +
-                            '       <a><i class="fa fa-trash-o" aria-hidden="true" title="删除账号" ' +
+                            '       <a><i class="fa fa-trash-o" aria-hidden="true" title="删除" ' +
                             '             onclick="deleteOne(this)"></i></a>' +
                             '   </div>' +
                             '   <div>' +
-                            '       <a><i class="fa fa-pencil" aria-hidden="true" title="编辑账号" ' +
+                            '       <a><i class="fa fa-pencil" aria-hidden="true" title="编辑" ' +
                             '           onclick="edit_oa(this)"></i></a>' +
                             '   </div>' +
-                            '   <div>' +
-                            '       <a><i class="fa fa-key" aria-hidden="true" title="重置密码" ' +
-                            '           onclick="resetPassword(this)"></i></a>' +
-                            '   </div>' +
+
                             '</tr>';
                     }
                     light_up_add();
